@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Main</title>
+
+	<style>
+
+	body {
+		background-image: url("./img/mainMenu.png");
+	    background-repeat: no-repeat;
+		background-position: center; 
+	}
+		
+	.smartHelpButton {
+		background:url(./img/smartHelp.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 40%;
+		bottom: 0%;
+		width:240px;
+		height: 320px;
+	}
+
+	.smartHelpButton:active {   
+		background:url(./img/smartHelpActive.png) no-repeat;
+	}
+
+	.cardioButton {
+		background:url(./img/cardio.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 78%;
+		bottom: 21%;
+		width: 240px;
+		height: 320px;
+	}
+
+	.cardioButton:active {   
+		background:url(./img/cardioActive.png) no-repeat;
+	}
+
+	.trainerButton {
+		background:url(./img/trainer.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 64%;
+		bottom: 54%;
+		width: 240px;
+		height: 320px;
+	}
+
+	.trainerButton:active {   
+		background:url(./img/trainerActive.png) no-repeat;
+	}
+
+	.routesButton {
+		background:url(./img/routes.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 16%;
+		bottom: 54%;
+		width: 240px;
+		height: 320px;
+	}
+
+	.routesButton:active {   
+		background:url(./img/routesActive.png) no-repeat;
+	}
+
+	.friendsButton {
+		background:url(./img/friends.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 2%;
+		bottom: 21%;
+		width: 240px;
+		height: 320px;
+	}
+
+	.friendsButton:active {   
+		background:url(./img/friendsActive.png) no-repeat;
+	}
+
+	.centralButton {
+		background:url(./img/central.png) no-repeat;
+		border-radius: 100%;
+		border: 1px solid #303030;
+		cursor:pointer;
+		position: absolute;
+		left: 35%;
+		bottom: 35%;
+		width: 240px;
+		height: 320px;
+	}
+
+	.centralButton:active {   
+		background:url(./img/centralActive.png) no-repeat;
+	}
+
+	</style>
+	
+</head>
+
+<body>
+
+    <script type="text/javascript" src="cordova.js" ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript"> app.initialize();</script>
+
+	<input type="button" class="smartHelpButton" value="SMARTHELP" onclick="location.href='smartHelpMenu.html';">
+	<input type="button" class="cardioButton"    value="CARDIO" onclick="location.href='cardioMenu.html';">
+	<input type="button" class="trainerButton"   value="TRAINER" onclick="location.href='trainer1Menu.html';">
+	<input type="button" class="routesButton"    value="ROUTES" onclick="location.href='routesMenu.html';">
+	<input type="button" class="friendsButton"   value="FRIENDS" onclick="location.href='friendsMenu.html';">
+	<input type="button" class="centralButton"   value="CENTRAL" onclick="location.href='centralMenu.html';">
+
+</body>
